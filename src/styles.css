@@ -1,0 +1,66 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #102033;
+  background: #f3f7fb;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+
+.app { width: min(1180px, 100%); margin: 0 auto; padding: 24px; }
+.header { display: flex; justify-content: space-between; gap: 20px; align-items: center; margin-bottom: 28px; }
+.header h1 { margin: 4px 0 0; font-size: clamp(26px, 4vw, 42px); }
+.header nav a, .back-link { color: #8795a1; font-weight: 700; }
+.eyebrow { margin: 0; color: #8795a1; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; font-size: 12px; }
+
+.hero, .booking-header, .panel, .train-card { background: #fff; border: 1px solid #dbe6f3; border-radius: 24px; box-shadow: 0 16px 40px rgba(34, 66, 112, 0.08); }
+.hero { display: grid; grid-template-columns: 1.5fr 1fr; gap: 20px; align-items: end; padding: 28px; margin-bottom: 22px; }
+.hero h2, .booking-header h2 { margin: 8px 0; font-size: clamp(24px, 3vw, 36px); }
+.hero p, .booking-header p { color: #617085; }
+.search-box, .booking-form label { display: grid; gap: 8px; font-weight: 700; }
+input { width: 100%; border: 1px solid #cad7e6; border-radius: 14px; padding: 13px 14px; outline: none; transition: 0.2s; }
+input:focus { border-color: #8795a1; box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.12); }
+
+.train-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.train-card { padding: 20px; transition: transform 0.2s, box-shadow 0.2s; }
+.train-card:hover { transform: translateY(-4px); box-shadow: 0 18px 46px rgba(34, 66, 112, 0.13); }
+.train-card__top { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+.badge { background: #e9f2ff; color: #8795a1; padding: 8px 12px; border-radius: 999px; font-weight: 800; }
+.train-card h2 { margin: 18px 0; }
+.train-info { display: grid; gap: 7px; margin-bottom: 18px; }
+.train-info p { margin: 0; color: #526275; }
+.train-info span { font-weight: 800; color: #102033; }
+.primary-link, .primary-button { display: inline-flex; justify-content: center; align-items: center; border: 0; border-radius: 14px; background: #617085; color: white; padding: 13px 16px; font-weight: 800; cursor: pointer; transition: 0.2s; }
+.primary-link:hover, .primary-button:hover { background: #084db3; }
+.empty { background: white; border-radius: 16px; padding: 18px; }
+.error-box { background: #fff0f0; color: #8795a1; border: 1px solid #f2b8b8; border-radius: 16px; padding: 18px; font-weight: 800; }
+
+.booking-page { display: grid; gap: 18px; }
+.booking-header { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 24px; }
+.panel { padding: 22px; }
+.panel h2 { margin-top: 0; }
+.wagon-list { display: flex; flex-wrap: wrap; gap: 12px; }
+.wagon { display: grid; gap: 5px; min-width: 150px; text-align: left; border: 1px solid #cad7e6; border-radius: 16px; background: #f8fbff; padding: 14px; cursor: pointer; transition: 0.2s; }
+.wagon:hover, .wagon.active { border-color: #8795a1; background: #e9f2ff; }
+.wagon span, .wagon small { color: #617085; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 16px; }
+.legend span { display: inline-flex; align-items: center; gap: 7px; color: #526275; font-weight: 700; }
+.legend i { width: 16px; height: 16px; border-radius: 5px; display: inline-block; }
+.seat-map { display: grid; grid-template-columns: repeat(auto-fill, minmax(48px, 1fr)); gap: 10px; }
+.seat { border: 0; border-radius: 12px; min-height: 44px; color: white; font-weight: 900; cursor: pointer; transition: 0.2s; }
+.seat:hover:not(:disabled) { transform: scale(1.05); }
+.free, .seat.free { background: #21a366; }
+.selected, .seat.selected { background: #8795a1; }
+.booked, .seat.booked { background: #8795a1; cursor: not-allowed; opacity: 0.8; }
+.booking-form { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.booking-form button { grid-column: 1 / -1; }
+.booking-form small, .error { color: #8795a1; font-weight: 700; }
+
+@media (max-width: 760px) {
+  .app { padding: 16px; }
+  .header, .hero, .booking-header { grid-template-columns: 1fr; flex-direction: column; align-items: stretch; }
+  .booking-form { grid-template-columns: 1fr; }
+  .seat-map { grid-template-columns: repeat(4, 1fr); }
+}
