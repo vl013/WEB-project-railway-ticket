@@ -1,0 +1,75 @@
+export const trains = [
+  {
+    id: 'train-001',
+    number: '043К',
+    from: 'Київ',
+    to: 'Івано-Франківськ',
+    departureDate: '2026-05-18',
+    departureTime: '19:06',
+    duration: '10 год 42 хв',
+    price: 620,
+    wagons: [
+      { id: '1', type: 'Купе', seats: 36 },
+      { id: '2', type: 'Плацкарт', seats: 54 },
+      { id: '3', type: 'Люкс', seats: 18 }
+    ]
+  },
+  {
+    id: 'train-002',
+    number: '749О',
+    from: 'Київ',
+    to: 'Львів',
+    departureDate: '2026-05-19',
+    departureTime: '06:52',
+    duration: '5 год 28 хв',
+    price: 780,
+    wagons: [
+      { id: '1', type: 'Інтерсіті+', seats: 48 },
+      { id: '2', type: 'Інтерсіті+', seats: 48 }
+    ]
+  },
+  {
+    id: 'train-003',
+    number: '081Л',
+    from: 'Львів',
+    to: 'Ужгород',
+    departureDate: '2026-05-20',
+    departureTime: '22:40',
+    duration: '6 год 15 хв',
+    price: 410,
+    wagons: [
+      { id: '1', type: 'Купе', seats: 36 },
+      { id: '2', type: 'Плацкарт', seats: 54 }
+    ]
+  },
+  {
+    id: 'train-004',
+    number: '705К',
+    from: 'Київ',
+    to: 'Перемишль',
+    departureDate: '2026-05-21',
+    departureTime: '07:00',
+    duration: '8 год 10 хв',
+    price: 950,
+    wagons: [
+      { id: '1', type: 'Інтерсіті+', seats: 48 },
+      { id: '2', type: 'Інтерсіті+', seats: 48 },
+      { id: '3', type: 'Інтерсіті+', seats: 48 }
+    ]
+  },
+  {
+    id: 'train-005',
+    number: '026Ш',
+    from: 'Одеса',
+    to: 'Львів',
+    departureDate: '2026-05-22',
+    departureTime: '18:30',
+    duration: '12 год 05 хв',
+    price: 690,
+    wagons: [
+      { id: '1', type: 'Купе', seats: 36 },
+      { id: '2', type: 'Плацкарт', seats: 54 },
+      { id: '3', type: 'Люкс', seats: 18 }
+    ]
+  }
+];
