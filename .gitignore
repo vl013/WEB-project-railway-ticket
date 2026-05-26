@@ -1,11 +1,10 @@
-# Залежності
+
 node_modules/
 
-# Зібраний проєкт (білд)
 dist/
 dist-ssr/
 
-# Системні файли macOS та Windows
+
 .DS_Store
 __MACOSX/
 Thumbs.db
@@ -15,6 +14,5 @@ logs
 *.log
 npm-debug.log*
 
-# Змінні оточення
 .env
 .env.local
