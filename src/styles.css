@@ -64,3 +64,4 @@ input:focus { border-color: #8795a1; box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.
   .booking-form { grid-template-columns: 1fr; }
   .seat-map { grid-template-columns: repeat(4, 1fr); }
 }
+button { transition: all 0.3s ease; }
