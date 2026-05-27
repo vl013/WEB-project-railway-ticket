@@ -23,3 +23,4 @@ export const BookingService = {
       .flatMap((booking) => booking.seats);
   }
 };
+// Handles LocalStorage isolation and data serialization
